@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>デモンストレーション</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+  html, body {
+    overflow: hidden; /* 🚫 隐藏滚动条 */
+    background-color: #f5f7fa;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  .slide-container {
+    width: 1280px;
+    height: 500px;
+    background-color: #f5f7fa;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bubble-decoration {
+    position: absolute;
+    border-radius: 24px;
+    background-color: #4A90E2;
+    opacity: 0.1;
+  }
+
+  h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #2c3e50;
+  }
+
+  /* 左右切换按钮 */
+  .nav-btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+  .nav-btn:hover {
+    opacity: 1;
+  }
+  .nav-btn.prev { left: 40px; }
+  .nav-btn.next { right: 40px; }
+</style>
+</head>
+<body class="flex justify-center items-center">
+
+<div class="slide-container">
+  <!-- 装飾用のバブル -->
+  <div class="bubble-decoration" style="width: 180px; height: 120px; top: 80px; right: 100px;"></div>
+  <div class="bubble-decoration" style="width: 100px; height: 100px; bottom: 100px; left: 150px;"></div>
+  <div class="bubble-decoration" style="width: 150px; height: 70px; top: 320px; right: 200px;"></div>
+ <div >
+<h1>実演</h1>
+<div class="w-24 h-2 bg-blue-500 mb-6"></div>
+</div>
+</div>
+
+<!-- 左右切换按钮 -->
+<button class="nav-btn prev" onclick="location.href='ppt5.html'">
+  <i class="fas fa-chevron-left text-2xl"></i>
+</button>
+
+<button class="nav-btn next" onclick="location.href='ppt7.html'">
+  <i class="fas fa-chevron-right text-2xl"></i>
+</button>
+
+</body>
+</html>

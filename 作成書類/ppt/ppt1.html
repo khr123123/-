@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>チャットアプリケーション紹介</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+  }
+  .slide-container {
+    width: 1280px;
+    min-height: 720px;
+    overflow: hidden;
+    position: relative;
+    background-color: #f5f7fa;
+  }
+  .bubble-decoration {
+    position: absolute;
+    border-radius: 24px;
+    background-color: #4A90E2;
+    opacity: 0.1;
+  }
+  .title-section {
+    padding-top: 140px;
+  }
+  .chat-icon {
+    color: #4A90E2;
+    font-size: 80px; /* 原64px → 放大 */
+    margin-bottom: 30px;
+  }
+  h1 {
+    font-size: 68px; /* 原56px → 放大 */
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 30px;
+  }
+  h2 {
+    font-size: 48px; /* 原40px → 放大 */
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 25px;
+  }
+  .subtitle {
+    font-size: 34px; /* 原28px → 放大 */
+    font-weight: 500;
+    color: #4A90E2;
+    margin-bottom: 35px;
+  }
+  .description {
+    font-size: 24px; /* 原20px → 放大 */
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #5d6778;
+  }
+
+  /* 左右切换按钮 */
+  .nav-btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 70px; /* 原60px → 放大 */
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    font-size: 1.5rem; /* 图标稍微放大 */
+  }
+  .nav-btn:hover {
+    opacity: 1;
+  }
+  .nav-btn.prev {
+    left: 25px;
+  }
+  .nav-btn.next {
+    right: 25px;
+  }
+</style>
+</head>
+<body>
+<div class="flex flex-col items-center justify-center text-center px-8">
+  <!-- 装飾用のバブル要素 -->
+  <div class="bubble-decoration" style="width: 200px; height: 100px; top: 100px; left: 100px;"></div>
+  <div class="bubble-decoration" style="width: 150px; height: 150px; bottom: 120px; right: 180px;"></div>
+  <div class="bubble-decoration" style="width: 100px; height: 80px; top: 350px; left: 250px;"></div>
+  <div class="bubble-decoration" style="width: 180px; height: 60px; bottom: 200px; left: 180px;"></div>
+
+  <div class="title-section">
+    <div class="chat-icon">
+      <i class="fas fa-comments"></i> KK-LINE
+    </div>
+    <h1>チャットアプリケーション</h1>
+    <p class="description">
+      キョウ　2025.10.22
+    </p>
+  </div>
+</div>
+
+<!-- 左右切换按钮 -->
+<button class="nav-btn prev" onclick="location.href='ppt8.html'">
+  <i class="fas fa-chevron-left"></i>
+</button>
+
+<button class="nav-btn next" onclick="location.href='ppt2.html'">
+  <i class="fas fa-chevron-right"></i>
+</button>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>目次</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-container {
+  width: 1280px;
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+  background-color: #f5f7fa;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  border-radius: 16px;
+}
+
+.bubble-decoration {
+  position: absolute;
+  border-radius: 24px;
+  background-color: #4A90E2;
+  opacity: 0.1;
+}
+
+h1 {
+  font-size: 48px; /* 保持不变 */
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 40px;
+}
+
+.toc-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px; /* 稍微加大间距 */
+}
+
+.toc-number {
+  width: 60px;  /* 原50px → 放大 */
+  height: 60px;
+  background-color: #4A90E2;
+  color: white;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+  font-size: 30px; /* 原24px → 放大 */
+  font-weight: bold;
+}
+
+.toc-text {
+  font-size: 30px; /* 原22px → 放大 */
+  color: #3d4852;
+}
+
+.nav-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 80px; /* 原60px → 放大 */
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+  font-size: 1.6rem; /* 图标稍微放大 */
+}
+
+.nav-btn:hover {
+  opacity: 1;
+}
+
+.nav-btn.prev {
+  left: 25px;
+}
+
+.nav-btn.next {
+  right: 25px;
+}
+</style>
+</head>
+<body>
+<div class="slide-container flex items-center px-16 py-10">
+  <!-- 装飾用のバブル要素 -->
+  <div class="bubble-decoration" style="width: 180px; height: 120px; top: 80px; right: 100px;"></div>
+  <div class="bubble-decoration" style="width: 100px; height: 100px; bottom: 100px; left: 150px;"></div>
+  <div class="bubble-decoration" style="width: 150px; height: 70px; top: 320px; right: 200px;"></div>
+
+  <div class="w-full">
+    <div class="flex flex-row">
+      <!-- 左側：タイトル部分 -->
+      <div class="w-1/3">
+        <h1>目次</h1>
+        <div class="w-28 h-2 bg-blue-500 mb-6"></div>
+      </div>
+
+      <!-- 右側：目次リスト部分 -->
+      <div class="w-2/3 pl-6">
+        <div class="toc-item">
+          <div class="toc-number">1</div>
+          <div class="toc-text">主な機能</div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-number">2</div>
+          <div class="toc-text">技術スタック</div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-number">3</div>
+          <div class="toc-text">動機・過程</div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-number">4</div>
+          <div class="toc-text">実演</div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-number">5</div>
+          <div class="toc-text">まとめ</div>
+        </div>
+
+        <!-- 左右切换按钮 -->
+        <button class="nav-btn prev" onclick="location.href='ppt1.html'">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="nav-btn next" onclick="location.href='ppt3.html'">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
